@@ -27,12 +27,16 @@ function populateImages(){
 };
 
 function deleteLastCards(){
+    let id = document.querySelectorAll("main > div.album > div.container > div.row > div.col-md-4 > div.card").length - 1;
     let counter = 3;
     while(counter > 0){
-    console.log(document.querySelectorAll("main > div.album > div.container > div.row > div.col-md-4 > div.card")[counter].remove());
+    console.log(id)
+    console.log(document.querySelectorAll("main > div.album > div.container > div.row > div.col-md-4 > div.card")[id].remove());
     counter--;
+    id--;
     };
 };
+
 
 changeTitles();
 changeCallToActions();
